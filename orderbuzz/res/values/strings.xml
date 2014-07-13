@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SplashActivity!</string>
+    <string name="app_name">ORDERBUZZ</string>
+    <string name="activity_splash_title_line_one">ORDERBUZZ</string>
+    <string name="activity_splash_title_line_two">* Order Online *</string>
+    <string name="activity_main_made_it">You did it!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+     <string name="menu_settings">Settings</string>
+    <string name="name">tajinder</string>
+    <string name="cart_name">MYCART</string>
+    
+
+</resources>

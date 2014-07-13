@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orderbuzz"
+    android:versionCode="2"
+    android:versionName="0.0.1-SNAPSHOT" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@drawable/orderbuzz"
+        android:label="@string/app_name" >
+        <activity android:name=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RestaurantListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name=".TopRestaurantListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MenuListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MenuOptionListViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".CartListViewActivity"
+            android:label="@string/cart_name" >
+        </activity>
+        <activity
+            android:name=".VibratorActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".HomePageActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver
+            android:name=".notification.SeriousBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.orderbuzz.notification" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
