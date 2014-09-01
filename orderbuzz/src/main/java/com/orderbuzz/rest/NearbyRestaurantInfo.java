@@ -54,7 +54,6 @@ public class NearbyRestaurantInfo extends AsyncTask<String, Void, List<Restauran
 	@Override
 	protected List<Restaurant> doInBackground(String... urls) {
 		System.out.println(" DO Back ");
-		//SystemClock.sleep(5000);
 
 		String radius = urls[0];
 		String Lat = urls[1];
