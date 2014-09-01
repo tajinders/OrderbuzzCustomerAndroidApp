@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -33,17 +34,20 @@ public class SeriousBroadcastReceiver extends BroadcastReceiver {
 		String a = intent.getAction();
 		if (a.equals("com.google.android.c2dm.intent.RECEIVE")) {
 
-		Toast.makeText(context, "GOTGCM PING", Toast.LENGTH_SHORT).show();		
+		Toast.makeText(context, "NOTIFICATION", Toast.LENGTH_SHORT).show();		
 			
-			//			String payload = intent.getStringExtra("data");
-			//			intent = new Intent(context, VibratorActivity.class);
-			//			
-			//			Bundle bundle = new Bundle();
-			//			bundle.putString("orderinfo",payload );
-			//			intent.putExtras(bundle);
-			//			
-			//			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			//			context.startActivity(intent);
+		String payload = intent.getStringExtra("data");
+		
+		System.out.println(payload);
+		
+		intent = new Intent(context, VibratorActivity.class);
+
+		Bundle bundle = new Bundle();
+		bundle.putString("orderinfo",payload );
+		intent.putExtras(bundle);
+
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(intent);
 
 		}
 	}

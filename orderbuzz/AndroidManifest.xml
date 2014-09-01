@@ -47,7 +47,7 @@
             android:label="@string/cart_name" >
         </activity>
         <activity
-            android:name=".VibratorActivity"
+            android:name=".notification.VibratorActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
